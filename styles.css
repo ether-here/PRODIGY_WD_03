@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: #61dafb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+header {
+    background-color: #61dafb;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: #282c34;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #61dafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.cell:hover {
+    background-color: #21a1f1;
+}
+
+.cell.x {
+    background-color: #f5a623;
+}
+
+.cell.circle {
+    background-color: #b71845;
+}
+
+.winning-message {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+
+.winning-message.show {
+    display: flex;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #282c34;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    background-color: #61dafb;
+    color: #282c34;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
